@@ -36,7 +36,8 @@ const GlobalStyle = createGlobalStyle`
         color:white;
     }
     h4{
-        color:#23d997;
+        font-weight: bold;
+        font-size:2rem ;
     }
     span{
         font-weight:bold;
