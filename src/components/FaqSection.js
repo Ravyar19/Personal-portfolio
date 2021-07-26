@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { About } from "../styles"
+import Toggle from "./Toggle"
+import { AnimateSharedLayout } from "framer-motion"
 
 const FaqSection = () => {
   return (
@@ -8,38 +10,24 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>Lorem, ipsum.</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Lorem, ipsum.</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Lorem, ipsum.</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Lorem, ipsum.</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How Do i Start">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At illo
+              harum deleniti architecto fugiat, possimus cum corrupti culpa ex
+              corporis!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="How Do i Start">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   )
 }
