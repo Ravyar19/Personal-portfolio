@@ -2,32 +2,34 @@ import React from "react"
 import pro from "../img/pro.jpg"
 import { About, Description, Hide, Image } from "../styles"
 import { motion } from "framer-motion"
+import { titleAnim, fade, photoAnim } from "../animation"
+
 const AboutSection = () => {
   return (
     <About>
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2>Hi</motion.h2>
+            <motion.h2 variants={titleAnim}>Hi</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               I'm <span>Ravyar Aram</span>{" "}
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2> a Web Developer</motion.h2>
+            <motion.h2 variants={titleAnim}> a Web Developer</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           I'm an inquisitive web developer learning to build smashing websites,
           Therefore I believe that there is no limitation to what a human being
           is capable of doing
-        </p>
-        <button>Contact me</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact me</motion.button>
       </Description>
       <Image className="image">
-        <img src={pro} alt="" />
+        <motion.img variants={photoAnim} src={pro} alt="" />
       </Image>
     </About>
   )
