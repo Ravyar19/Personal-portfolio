@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useHistory } from "react-router-dom"
 import { SkillState } from "../SkillState"
+import { motion } from "framer-motion"
+import { pageAnimation } from "../animation"
 
 const SkillDetail = () => {
   const history = useHistory()
@@ -17,7 +19,12 @@ const SkillDetail = () => {
   return (
     <>
       {skill && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          exit="exit"
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{skill.title}</h2>
             <img src={skill.mainImg} alt="skill" />
@@ -40,7 +47,7 @@ const SkillDetail = () => {
   )
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `
 

@@ -3,10 +3,12 @@ import getfit from "../img/getfit.png"
 import find from "../img/find.png"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { pageAnimation } from "../animation"
 
 const MyWorks = () => {
   return (
-    <Work>
+    <Work variants={pageAnimation} exit="exit" initial="hidden" animate="show">
       <Works>
         <h2>GETFITKURD</h2>
         <div className="line"></div>
@@ -25,7 +27,7 @@ const MyWorks = () => {
   )
 }
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
@@ -43,7 +45,7 @@ const Works = styled.div`
   }
   img {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     object-fit: contain;
   }
 `
