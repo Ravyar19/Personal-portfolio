@@ -1,24 +1,24 @@
 import React from "react"
 import pro from "../img/pro.jpg"
 import { About, Description, Hide, Image } from "../styles"
-
+import { motion } from "framer-motion"
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div>
           <Hide>
-            <h2>Hi</h2>
+            <motion.h2>Hi</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2>
               I'm <span>Ravyar Aram</span>{" "}
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2> a Web Developer</h2>
+            <motion.h2> a Web Developer</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           I'm an inquisitive web developer learning to build smashing websites,
           Therefore I believe that there is no limitation to what a human being
