@@ -10,9 +10,19 @@ import img6 from "../img/6.svg"
 import styled from "styled-components"
 import { About, Image, Description } from "../styles"
 
+import { scrollReveal } from "../animation"
+import { useScroll } from "./useScroll"
+
 const MyServices = () => {
+  const [element, controls] = useScroll()
+
   return (
-    <Service>
+    <Service
+      ref={element}
+      animate={controls}
+      initial="hidden"
+      variants={scrollReveal}
+    >
       <Description>
         <h2>
           My <span>Skills</span> ....
