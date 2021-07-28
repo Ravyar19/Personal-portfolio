@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { fade, pageAnimation, photoAnim, lineAnim, slider } from "../animation"
 import { useScroll } from "../components/useScroll"
+import ScrollTop from "../components/ScrollTop"
 
 const MyWorks = () => {
   const [element, controls] = useScroll()
@@ -35,6 +36,7 @@ const MyWorks = () => {
           </Hide>
         </Link>
       </Works>
+      <ScrollTop />
     </Work>
   )
 }
