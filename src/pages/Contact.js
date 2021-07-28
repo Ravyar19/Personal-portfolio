@@ -35,7 +35,7 @@ const Contact = () => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/ravyar-aram-b767661aa/"
             >
-              <h2>Send Me A Message.</h2>
+              <h3>Send Me A Message.</h3>
             </a>
           </Social>
         </Hide>
@@ -47,7 +47,7 @@ const Contact = () => {
               rel="noreferrer"
               href="mailto:ravyar.ara@gmail.com"
             >
-              <h2>Email Me.</h2>
+              <h3>Email Me.</h3>
             </a>
           </Social>
         </Hide>
@@ -60,6 +60,11 @@ const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media (max-width: 1500px) {
+    margin-top: 5rem;
+    padding: 2rem;
+    font-size: 1rem;
+  }
 `
 
 const Title = styled.div`
@@ -82,7 +87,8 @@ const Circle = styled.div`
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
-  h2 {
+
+  h3 {
     margin: 2rem;
     color: white;
     font-weight: lighter;

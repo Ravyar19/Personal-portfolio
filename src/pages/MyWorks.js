@@ -49,6 +49,9 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
     color: #fff;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `
 
 const Works = styled(motion.div)`
