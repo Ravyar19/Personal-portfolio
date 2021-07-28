@@ -4,16 +4,11 @@ import find from "../img/find.png"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import {
-  fade,
-  pageAnimation,
-  photoAnim,
-  lineAnim,
-  slider,
-  sliderCont,
-} from "../animation"
+import { fade, pageAnimation, photoAnim, lineAnim, slider } from "../animation"
+import { useScroll } from "../components/useScroll"
 
 const MyWorks = () => {
+  const [element, controls] = useScroll()
   return (
     <Work variants={pageAnimation} exit="exit" initial="hidden" animate="show">
       <motion.div>
@@ -31,7 +26,7 @@ const MyWorks = () => {
           </Hide>
         </Link>
       </Works>
-      <Works>
+      <Works ref={element} variants={fade} animate={controls} initial="hidden">
         <motion.h2 variants={fade}>FindYours</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/findyours">
@@ -54,7 +49,7 @@ const Work = styled(motion.div)`
   }
 `
 
-const Works = styled.div`
+const Works = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
